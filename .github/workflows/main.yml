@@ -9,4 +9,10 @@ jobs:
     steps:
       - name: print first weclome message
         run: echo " hello from my first workflow"
+      - name: clone the new version of 
+        uses: actions/checkout@v7.0.0
+      - name: list all objects in the repo
+        run: ls -al
+        
+        
         
