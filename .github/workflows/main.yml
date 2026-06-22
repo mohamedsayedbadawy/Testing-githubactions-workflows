@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print first weclome message
-        run: echo" hello from my first workflow"
+        run: echo " hello from my first workflow"
         
