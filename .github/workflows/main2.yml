@@ -8,7 +8,11 @@ jobs:
   first-job:
    runs-on: ubuntu-22.04
    steps:
-     - name: print hellp message 
+     - name: print hello message 
        run: echo " hello this my first workflow"
+     - name: checkut the branch
+       uses: actions/checkout@v4.4.0
+     - name: list components of the repo 
+       run: ls -al
        
   
