@@ -1,0 +1,13 @@
+name: trigger workflow
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  scheduled-job:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.4.0
+      - name: print hello message
+        run: echo "hello this is my scheduled workflow"
