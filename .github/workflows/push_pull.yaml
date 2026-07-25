@@ -16,10 +16,10 @@ on:
       - 'src/**'
       - 'release/**'
 jobs:
-   first-job: 
-   
-     runs-on: ubuntu-22.04
+  first-job: 
 
-     steps:
-       - name: run test code  
-         run: npm test
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: run test code  
+        run: npm test
