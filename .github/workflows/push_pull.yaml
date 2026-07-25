@@ -1,0 +1,23 @@
+name: push_pull trigger 
+
+on: 
+  push:
+    branches:
+      - main 
+      -"release/*"
+    pathes:
+      - 'src/**'
+      - 'release/**'
+  pull_request:
+    branches:
+      - main 
+      -"release/*"
+    pathes:
+      - 'src/**'
+      - 'release/**'
+jobs:
+  first-job:
+   runs-on: ubuntu-22.04
+   steps:
+     - name: run test code  
+       run: npm test
