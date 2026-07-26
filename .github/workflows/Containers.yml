@@ -26,6 +26,6 @@ jobs:
         username: mohamedbadawy2002
         password: MohamedSayed@2002
     steps:
-      - run: cat /var/share/nginx/html/index.html
+      - run: cat /usr/share/nginx/html/index.html
       
        
