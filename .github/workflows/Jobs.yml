@@ -27,4 +27,9 @@ jobs:
     needs: [job2, job3]
     steps:
       - name: Print hello message
-        run: echo "hello this is my workflow on ${{github.job}}"
+        run: |
+          echo "hello this is my workflow on ${{github.job}}"
+          echo "I will be good"
+        working-directory: ./temp 
+        shell: bash #cmd pwsh 
+        
