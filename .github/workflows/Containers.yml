@@ -1,0 +1,16 @@
+name: Containers workflow
+on:
+  workflow_dispatch:
+
+
+jobs:
+  hybrid-job:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: VM-running step 
+        run: echo "hello this is my hybrid workflow on ubuntu VM"
+      - name: container running step
+        uses: docker://alpine:3.18.2
+        with:
+          entrypoint: /bin/sh
+          args: -c "echo 'hello this is my hybrid workflow on container'"
