@@ -1,6 +1,16 @@
 name: Manual Workflow
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Select the environment'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - dev
+          - staging
+          - production
       
 
 
