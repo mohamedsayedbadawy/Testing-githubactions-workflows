@@ -12,6 +12,6 @@ jobs:
         node_version: [15.x , 16.x, 17.x]
     runs-on: ${{matrix.os}}
     steps:
-      - uses: actions/setup-node@3.6.0
+      - uses: actions/setup-node@v3.6.0
         with:
           node_version: ${{matrix.node_version}}
