@@ -1,10 +1,10 @@
 name: Custom Action Workflow
 on:
   workflow_dispatch:
-inputs:
-    first_name:
-      description: 'First name of the user'
-      required: true
+      inputs:
+        first_name:
+          description: 'First name of the user'
+          required: true
 jobs:
   custom-action-job:
     runs-on: ubuntu-22.04
