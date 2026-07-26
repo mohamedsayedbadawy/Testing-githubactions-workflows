@@ -1,0 +1,30 @@
+name: workflow on Jobs
+on: 
+  workdflow_dispatch:
+
+
+jobs:
+  job1:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Print hello message
+        run: echo "hello this is my workflow on ${{workflow.job}}"
+  job2:
+    runs-on: ubuntu-22.04
+    needs: job1
+    steps:
+      - name: Print hello message
+        run: echo "hello this is my workflow on ${{workflow.job}}"
+  job3:
+    runs-on: ubuntu-22.04
+    needs: job1
+    steps:
+      - name: Print hello message
+        run: echo "hello this is my workflow on ${{workflow.job}}"
+  job4:
+    runs-on: ubuntu-22.04
+    needs: [job2, job3]
+    steps:
+      - name: Print hello message
+        run: echo "hello this is my workflow on ${{workflow.job}}"
