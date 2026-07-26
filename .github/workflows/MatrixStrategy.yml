@@ -1,0 +1,16 @@
+name: Matrix strategy workflow 
+on: workflow_dispatch:
+
+jobs: 
+  matrix-strategy-job:
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix: 
+        os: [ubuntu-22.04, windows-latest, macos-13]
+        node_version: [15.x , 16.x, 17.x]
+    runs-on: ${{matrix.os}}
+    steps:
+      - uses: actions/setup-node@3.6.0
+        with:
+          node_version: ${{matrix.node_version}}
