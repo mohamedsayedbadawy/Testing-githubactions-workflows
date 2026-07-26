@@ -1,0 +1,12 @@
+name: Api Call 
+on: 
+  repository_dispatch:
+    types: [incident_repoted]
+
+jobs:
+  api-call-job:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Print hello message
+        run: echo "hello this is my api call workflow"
