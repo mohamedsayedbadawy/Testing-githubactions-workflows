@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-               "echo::warning::take care there is an warning"
+               echo "::warning::take care there is an warning"
