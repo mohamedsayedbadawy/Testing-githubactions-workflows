@@ -8,7 +8,7 @@ jobs:
 
       - name: set api key
         run: |
-               echo "::warning::take care there is an warning"
+               echo "::error::take care there is an warning"
                echo " api_key=12345" >> $GITHUB_ENV
       - name: print api key
         run: echo "::add-mask::$api_key"
