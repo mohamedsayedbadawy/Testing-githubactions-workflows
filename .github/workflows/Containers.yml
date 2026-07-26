@@ -10,7 +10,17 @@ jobs:
       - name: VM-running step 
         run: echo "hello this is my hybrid workflow on ubuntu VM"
       - name: container running step
-        uses: docker://alpine:3.18.2
+        uses: docker://alpine:3.18.2 ## to use this container must be available in docker hub or in your private registry
         with:
           entrypoint: /bin/sh
           args: -c "echo 'hello this is my hybrid workflow on container'"
+      ### to work with private registry you need to login first using docker login command 
+      ## and then use the container image in the workflow
+      ## for  images in private registry you need to  give it your credentionals  
+      ##and it must be separate job 
+  private_image-job:
+    runs-on: ubuntu-22.04 
+    container:
+      image: mohamedbadawy2002/nignx:5.0.0
+      steps:
+        run: cat /var/share/nginx/html/index.html
