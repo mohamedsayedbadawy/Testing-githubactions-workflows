@@ -22,5 +22,10 @@ jobs:
     runs-on: ubuntu-22.04 
     container:
       image: mohamedbadawy2002/nignx:5.0.0
-      steps:
-        run: cat /var/share/nginx/html/index.html
+        credentials:
+          username: mohamedbadawy2002
+          password: MohamedSayed@2002
+    steps:
+      - run: cat /var/share/nginx/html/index.html
+      
+       
