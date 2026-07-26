@@ -5,7 +5,7 @@ on:
       environment:
         description: 'Select the environment'
         required: true
-        default: 'staging'
+        default: 'stagingg'
         type: choice
         options:
           - dev
@@ -20,4 +20,4 @@ jobs:
 
     steps:
       - name: Print hello message
-        run: echo "hello this is my manual workflow"  
+        run: echo "hello this is my manual workflow ${{ inputs.environment}}"  
