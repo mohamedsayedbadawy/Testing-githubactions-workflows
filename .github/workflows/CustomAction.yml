@@ -1,0 +1,16 @@
+name: Custom Action Workflow
+on:
+  workflow_dispatch:
+inputs:
+    first_name:
+      description: 'First name of the user'
+      required: true
+jobs:
+  custom-action-job:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Run custom action
+        uses: ./.github/customactions/greeting
+        with:
+          first_name: ${{ inputs.first_name }}

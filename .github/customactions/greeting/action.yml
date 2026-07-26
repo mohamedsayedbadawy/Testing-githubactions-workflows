@@ -1,0 +1,14 @@
+name: custom-action 
+inputs:
+  first_name:
+    description: 'First name of the user'
+    required: true
+jobs:
+  custom_greeting_job:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: print greeting message
+        shell: bash
+        run: echo "Hello, ${{ inputs.first_name }}! Welcome to the custom action."
+
+    
