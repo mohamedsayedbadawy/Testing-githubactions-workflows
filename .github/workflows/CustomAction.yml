@@ -13,6 +13,8 @@ jobs:
       - name: checkout the branch
         uses: actions/checkout@v4.4.0 # you must do  this step before using the custom action
       - name: Run custom action
-        uses: .github/customactions/greeting@v1
+        uses: .github/customactions/greet@v1.0 
         with:
           first_name: ${{ inputs.first_name }}
+
+          

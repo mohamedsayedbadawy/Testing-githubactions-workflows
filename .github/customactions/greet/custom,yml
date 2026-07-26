@@ -1,0 +1,14 @@
+name: Greeting Action
+description: Prints a hello message
+
+inputs:
+  first_name:
+    description: User's first name
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        echo "Hello ${{ inputs.first_name }}"
