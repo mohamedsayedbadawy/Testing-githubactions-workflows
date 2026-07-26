@@ -8,4 +8,4 @@ jobs:
       - run: |
                echo "::warning::take care there is an warning"
                echo " api_key=12345" >> $GITHUB_ENV
-      - run: echo "$api_key"
+      - run: echo "${{$api_key}}"
