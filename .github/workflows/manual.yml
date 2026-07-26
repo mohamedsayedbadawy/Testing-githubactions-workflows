@@ -1,0 +1,11 @@
+on:
+  dispatch:
+
+
+jobs:
+  manual-job:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Print hello message
+        run: echo "hello this is my manual workflow"  
